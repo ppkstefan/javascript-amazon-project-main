@@ -1,6 +1,25 @@
 export const cart =[
 ];
-/*let productsCart;
+export function addToCart(productId){
+
+    let matchingItem;
+  
+    cart.forEach((item) => {
+      if (productId === item.productId) {
+        matchingItem = item;
+      }
+    });
+  
+    if (matchingItem) {
+      matchingItem.quantity += 1;
+    } else {
+      cart.push({
+        productId: productId,
+        quantity: 1
+      });
+    }
+  }
+/*let productsCart; 
 products.forEach((products)=>{
     productsCart+=`
     <div class="delivery-date">Delivery date: Tuesday, June 21</div>
