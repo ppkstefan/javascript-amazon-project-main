@@ -1,4 +1,4 @@
-const cart =[
+export const cart =[
 ];
 /*let productsCart;
 products.forEach((products)=>{
