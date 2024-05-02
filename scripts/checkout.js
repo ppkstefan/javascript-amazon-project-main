@@ -1,6 +1,6 @@
 import { cart } from '../data/cart.js';
 import { products } from '../data/products.js';
-
+let deliveryNumber=0;
 let cartSummaryHTML = '';
 
 function findProduct(productId) {
@@ -31,7 +31,7 @@ cart.forEach((cartItem) => {
                     <div class="delivery-options">
                         <div class="delivery-options-title">Choose a delivery option:</div>
                         <div class="delivery-option">
-                            <input type="radio" checked class="delivery-option-input" name="delivery-option-1" />
+                            <input type="radio" checked class="delivery-option-input" name="delivery-option-${deliveryNumber}" />
                             <div>
                                 <div class="delivery-option-date">Tuesday, June 21</div>
                                 <div class="delivery-option-price">FREE Shipping</div>
@@ -41,7 +41,7 @@ cart.forEach((cartItem) => {
                         <input
                         type="radio"
                         class="delivery-option-input"
-                        name="delivery-option-1"
+                        name="delivery-option-${deliveryNumber}"
                         />
                         <div>
                         <div class="delivery-option-date">Wednesday, June 15</div>
@@ -52,7 +52,7 @@ cart.forEach((cartItem) => {
                         <input
                         type="radio"
                         class="delivery-option-input"
-                        name="delivery-option-1"
+                        name="delivery-option-${deliveryNumber++}"
                         />
                         <div>
                         <div class="delivery-option-date">Monday, June 13</div>
